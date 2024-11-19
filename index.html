@@ -25,45 +25,53 @@
     <meta name="apple-mobile-web-app-title" content="Myportfolio" />
     <meta name="mobile-web-app-capable" content="yes">
     
-
-
-<!-- Styles and Fonts -->
-<link rel="stylesheet" href="/css/style.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<!-- Favicons -->
-<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/images/favicon.ico" />
-<link rel="manifest" href="/images/site.webmanifest" />
+    <!-- Styles and Fonts -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="manifest" href="/images/site.webmanifest" />
 
     <title>George Leslie | Web Developer Portfolio</title>
 </head>
 <body>
 
-    <header>
+    <header class="active">
         <a href="#" class="logo">George.</a>
 
         <i class="bx bx-menu" id="menu-icon"></i>
 
         <nav>
-            <a href="/pages/about.html" class="active">Home</a>
-            <a href="/pages/projects.html">Services</a>
-            <a href="/pages/skills.html">Resume</a>
-            <a href="/pages/blog.html">Portfolio</a>
-            <a href="/pages/resume.html">Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#resume"">Resume</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
+    <!-- Bars Background! -->
+     <div class="bars-box active">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+     </div>
+
     <!--Home Section -->
-    <section class="home">
+    <section class="home active">
         <div class="home-detail">
             <h1>George Leslie</h1>
             <h2>I'm a 
@@ -95,7 +103,7 @@
     </section>
 
     <!--Services Section-->
-    <section class="services active">
+    <section class="services">
         <h2 class="heading">My <span>Services</span></h2>
         <div class="services-container">
             <div class="services-box">
@@ -166,7 +174,369 @@
         </div>
     </section>
 
+    <!--Resume Section-->
+    <section class="resume">
+        <div class="resume-container">
+            <div class="resume-box">
+                <h2>Why Hire Me?</h2>
+                <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Pariatur asperiores officiis quidem omnis tenetur vel dolores quia eaque sunt optio explicabo
+                nemo facere, dignissimos doloremque! Vero nulla natus ea soluta!</p>
+                <button class="resume-btn active">Experience</button>
+                <button class="resume-btn">Education</button>
+                <button class="resume-btn">Skills</button>
+                <button class="resume-btn">About Me</button>
+            </div>
 
+            <div class="resume-box">
+                <div class="resume-detail experience active">
+                    <h2 class="heading">My <span>Experience</span></h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit earum quibusdam libero ipsam inventore iste animi.
+                        Minus cum dignissimos quae alias, delectus quaerat porro deleniti laborum iste labore totam voluptas.</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p class="year">2023 - Present</p>
+                            <h3>Frontend Developer</h3>
+                            <p class="company">Abc Corp</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2022 - 2023</p>
+                            <h3>Full Stack Developer</h3>
+                            <p class="company">Google</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2021 - 2022</p>
+                            <h3>Backend Developer</h3>
+                            <p class="company">Tech Domain</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2020 - 2021</p>
+                            <h3>IT Sales</h3>
+                            <p class="company">Lyreco</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2019 - 2020</p>
+                            <h3>UI/UX Designer</h3>
+                            <p class="company">Creative Designs</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2018 - 2019</p>
+                            <h3>Junior Developer</h3>
+                            <p class="company">Maintenance Men</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+        
+            
+                
+                <div class="resume-detail education">
+                    <h2 class="heading">My <span>Education</span></h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit earum quibusdam libero ipsam inventore iste animi.
+                     Minus cum dignissimos quae alias, delectus quaerat porro deleniti laborum iste labore totam voluptas.</p>
+                     <div class="resume-list">
+                        <div class="resume-item">
+                            <p class="year">2024</p>
+                            <h3>Programming Course</h3>
+                            <p class="company">Codecademy</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas commodi? Omnis</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2022 - 2023</p>
+                            <h3>Web Development Bootcamp</h3>
+                            <p class="company">CBT Nuggets</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas commodi? Omnis</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2020</p>
+                            <h3>Network+</h3>
+                            <p class="company">Comptia</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas commodi? Omnis</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2017 - 2018</p>
+                            <h3>Built Maintenance Men</h3>
+                            <p class="company">Maintenance Men</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas commodi? Omnis</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2012 - 2016</p>
+                            <h3>Masters In Engineering</h3>
+                            <p class="company">Leeds University</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas commodi? Omnis</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2024</p>
+                            <h3>Programming Course</h3>
+                            <p class="company">Codecademy</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas commodi? Omnis</p>
+                        </div>
+                     </div>
+                </div>
+
+                <div class="resume-detail skills">
+                    <h2 class="heading">My <span>Skills</span></h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit earum quibusdam libero ipsam inventore iste animi.
+                     Minus cum dignissimos quae alias, delectus quaerat porro deleniti laborum iste labore totam voluptas.</p>
+                     <div class="resume-list">
+                        <div class="resume-item">
+                            <i class='bx bxl-html5'></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxs-file-css' ></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-github' ></i>
+                            <span>Github</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-javascript' ></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-react' ></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-nodejs' ></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="resume-item">
+                        <i class='bx bxs-terminal' ></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-mongodb' ></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-aws' ></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-python' ></i>
+                            <span>Python3</span>
+                        </div>
+                     </div>
+                </div>
+
+                <div class="resume-detail about">
+                    <h2 class="heading">About <span>Me</span></h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit earum quibusdam libero ipsam inventore iste animi.
+                     Minus cum dignissimos quae alias, delectus quaerat porro deleniti laborum iste labore totam voluptas.</p>
+                     <div class="resume-list">
+                        <div class="resume-item">
+                            <p>Name: <span>George Leslie</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p>Gender: <span>Male</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p>Age: <span>33 Years Old</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p>Status: <span>Single</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p>Nationality: <span>British</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p>Location: <span>Thailand, Phuket</span></p>
+                        </div>
+                        
+                        <div class="resume-item">
+                            <p>Phone: <span>(+66) 838 722 697</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p>Email: <span>georgeleslie06@gmail.com</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Portfolio Section-->
+    <section class="potfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <div class="portfolio-detail active">
+                    <p class="numb">01</p>
+                    <h3>Frontend Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias repudiandae accusamus omnis ipsum
+                     ducimus nemo distinctio error quas, eos temporibus aliquid ut adipisci dignissimos repellendus, ipsa incidunt itaque molestias.</p>
+                     <div class="tech">
+                        <p>HTML5, CSS3, Javascript</p>
+                     </div>
+                     <div class="live-github">
+                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Project</span></a>
+                        <a href="#"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                     </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">02</p>
+                    <h3>Full Stack Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias repudiandae accusamus omnis ipsum
+                     ducimus nemo distinctio error quas, eos temporibus aliquid ut adipisci dignissimos repellendus, ipsa incidunt itaque molestias.</p>
+                     <div class="tech">
+                        <p>MongoDB, Express.js, React.js, Node.js</p>
+                     </div>
+                     <div class="live-github">
+                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Project</span></a>
+                        <a href="#"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                     </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">03</p>
+                    <h3>Frontend Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias repudiandae accusamus omnis ipsum
+                     ducimus nemo distinctio error quas, eos temporibus aliquid ut adipisci dignissimos repellendus, ipsa incidunt itaque molestias.</p>
+                     <div class="tech">
+                        <p>React.js, Bootstrap</p>
+                     </div>
+                     <div class="live-github">
+                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Project</span></a>
+                        <a href="#"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                     </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">04</p>
+                    <h3>Full Stack Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias repudiandae accusamus omnis ipsum
+                     ducimus nemo distinctio error quas, eos temporibus aliquid ut adipisci dignissimos repellendus, ipsa incidunt itaque molestias.</p>
+                     <div class="tech">
+                        <p>MongoDB, AWS, Express.js, Node.js, Nginx</p>
+                     </div>
+                     <div class="live-github">
+                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Project</span></a>
+                        <a href="#"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                     </div>
+                </div>
+                
+                <div class="portfolio-detail">
+                    <p class="numb">05</p>
+                    <h3>Backend Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias repudiandae accusamus omnis ipsum
+                     ducimus nemo distinctio error quas, eos temporibus aliquid ut adipisci dignissimos repellendus, ipsa incidunt itaque molestias.</p>
+                     <div class="tech">
+                        <p>Python, Express, Oauth 2.0, Linux, Nginx</p>
+                     </div>
+                     <div class="live-github">
+                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Project</span></a>
+                        <a href="#"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                     </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">06</p>
+                    <h3> Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias repudiandae accusamus omnis ipsum
+                     ducimus nemo distinctio error quas, eos temporibus aliquid ut adipisci dignissimos repellendus, ipsa incidunt itaque molestias.</p>
+                     <div class="tech">
+                        <p>HTML5, CSS3, Javascript</p>
+                     </div>
+                     <div class="live-github">
+                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Project</span></a>
+                        <a href="#"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                     </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <div class="portfolio-carousel">
+                    <div class="img-slide">
+                        <div class="img-item">
+                            <img src="/images/website1.webp">
+                        </div>    
+                        <div class="img-item">
+                            <img src="/images/website2.webp">
+                        </div>    
+                        <div class="img-item">
+                            <img src="/images/website3.webp">
+                        </div>    
+                        <div class="img-item">
+                            <img src="/images/website4.webp">
+                        </div>    
+                        <div class="img-item">
+                            <img src="/images/website5.webp">
+                        </div>    
+                        <div class="img-item">
+                            <img src="/images/website6.webp">
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <button class="arrow-left disabled"><i class='bx bx-left-arrow-alt' ></i></button>
+                    <button class="arrow-right"><i class='bx bx-right-arrow-alt'></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact Section!-->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-box">
+                <h2>Let's Work Together</h2>
+                <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Sequi similique nisi aliquid at reprehenderit quia illum est ut qui? Facilis eum cum quod amet aliquid ut necessitatibus reiciendis, iure consequuntur?</p>
+    
+                <div class="contact-detail">
+                    <i class='bx bxs-phone'></i>
+                    <div class="detail">
+                        <p>Phone</p>
+                        <p>(+66) 838 722 697</p>
+                    </div>
+                </div>
+    
+                <div class="contact-detail">
+                    <i class='bx bxs-envelope'></i> 
+                    <div class="detail">
+                        <p>Email</p>
+                        <p>georgeleslie06@gmail.com</p>
+                    </div>
+                </div>
+    
+                <div class="contact-detail">
+                    <i class='bx bx-current-location'></i>
+                    <div class="detail">
+                        <p>Location</p>
+                        <p>Thailand, Phuket</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Contact Form Section -->
+             
+            <div class="contact-box">
+                <form action="" method="post" class="contact-form">
+                    <h2 class="heading">Contact <span>Me!</span></h2>
+                    <div class="field-box">
+                        <!-- Corrected input types -->
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="text" placeholder="Email Subject" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
     <script src="js/script.js"></script>
 </body>
 </html>
