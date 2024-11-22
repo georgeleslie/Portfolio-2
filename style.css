@@ -889,3 +889,63 @@ section.active {
         font-size: 3.5rem;
     }
 } 
+
+.home-detail h2 {
+    display: inline-block;
+    font-size: clamp(2.4rem, 5vw, 3.2rem); /* Responsive font size */
+    margin-top: -1rem;
+}
+
+.home-detail h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 0.07rem var(--main-color);
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    25%, 100% {
+        display: none;
+    }
+}
+
+.home-detail h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 0.2rem solid var(--main-color);
+    color: var(--main-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+/* Media Queries for Fine-Tuning */
+@media (max-width: 768px) {
+    .home-detail h2 {
+        font-size: 2.4rem; /* Smaller font for tablets and phones */
+    }
+    .home-detail h2 span::before {
+        border-right: 0.15rem solid var(--main-color); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 450px) {
+    .home-detail h2 {
+        font-size: 2rem; /* Even smaller font for very small screens */
+    }
+    .home-detail h2 span::before {
+        border-right: 0.1rem solid var(--main-color); /* Thinner border for narrow screens */
+    }
+}
