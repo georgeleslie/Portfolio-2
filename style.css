@@ -764,9 +764,8 @@ section.active {
 
 }
 
-/* Breakpoints */
+/*breakpints*/
 
-/* Large Screens */
 @media (min-width: 1200px) {
     .home-img .img-box {
         width: 50rem;
@@ -774,14 +773,13 @@ section.active {
     }
 }
 
-/* Tablet and Smaller Screens */
 @media screen and (max-width: 1200px) {
     html {
-        font-size: 55%; /* Reduces base font size */
+        font-size: 55%;
     }
+    
 }
 
-/* Tablets (Large Screens) */
 @media screen and (max-width: 992px) {
     header {
         padding: 2rem 4%;
@@ -792,14 +790,12 @@ section.active {
     }
 }
 
-/* Small Tablets and Large Phones */
 @media screen and (max-width: 810px) {
     .contact-box .field-box {
-        grid-template-columns: 1fr; /* Single-column grid */
+        grid-template-columns: 1fr;
     }
 }
 
-/* Large Phones */
 @media screen and (max-width: 768px) {
     #menu-icon {
         display: block;
@@ -812,8 +808,8 @@ section.active {
         width: 100%;
         padding: 1rem 0;
         background: var(--bg-color);
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         text-align: center;
         display: none;
     }
@@ -832,16 +828,14 @@ section.active {
         justify-content: center;
         gap: 2rem;
     }
-
     .home-img .img-box {
         width: 35rem;
         height: 35rem;
     }
-
     .resume-container,
     .portfolio-container,
     .contact-container {
-        grid-template-columns: 1fr; /* Single-column layouts */
+        grid-template-columns: 1fr;
     }
 
     .resume-container {
@@ -851,13 +845,11 @@ section.active {
     .portfolio-container .portfolio-box:first-child {
         order: 1;
     }
-
     .contact-box .field-box {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Standard Phones */
 @media screen and (max-width: 600px) {
     .home-img .img-box {
         width: 30rem;
@@ -865,25 +857,23 @@ section.active {
     }
 
     .contact-box .field-box {
-        grid-template-columns: 1fr; /* Ensures single column */
+        grid-template-columns: 1fr;
     }
 }
 
-/* Small Phones */
 @media screen and (max-width: 450px) {
-    html {
-        font-size: 50%; /* Reduces font size further for small devices */
+    html{
+        font-size: 50%;
     }
-}
+} 
 
-/* Very Small Devices */
 @media screen and (max-width: 400px) {
     .home-detail,
     .resume-box h2,
     .resume-box .heading,
     .resume-box .desc,
     .resume-detail.about .resume-item {
-        text-align: center; /* Centers text for narrow screens */
+        text-align: center;
     }
 
     .home-detail .btn-sci .sci {
@@ -898,14 +888,9 @@ section.active {
     .contact-box h2 {
         font-size: 3.5rem;
     }
-}
+} 
 
-/* Performance Enhancements */
-.home-img .img-box {
-    will-change: width, height; /* Optimizes animation for smoother transitions */
-}
 
-body {
-    padding: env(safe-area-inset); /* Ensures compatibility with notched devices */
-}
+
+
 
