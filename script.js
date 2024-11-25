@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation Links and Logo
+    // === Word Cycling Feature ===
+    const words = document.querySelectorAll('.home-detail h2 span'); // Select all words
+    let currentWordIndex = 0; // Start with the first word
+
+    function cycleWords() {
+        // Remove the "active" class from all words
+        words.forEach(word => word.classList.remove('active'));
+
+        // Add the "active" class to the current word
+        words[currentWordIndex].classList.add('active');
+
+        // Move to the next word (loop back to the first word if at the end)
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+    }
+
+    // Initialize by showing the first word
+    cycleWords();
+
+    // Cycle words every 4 seconds
+    setInterval(cycleWords, 4000);
+
+    // === Navigation Links and Logo ===
     const navLinks = document.querySelectorAll('header nav a');
     const logoLink = document.querySelector('.logo');
     const barsBox = document.querySelector('.bars-box');
