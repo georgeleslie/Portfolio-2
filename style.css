@@ -172,7 +172,7 @@ section.active {
     }
 }
 
-.home-detail h2 span:before {
+.home-detail h2 span::before {
     content: attr(data-text);
     position: absolute;
     width: 0;
@@ -889,3 +889,30 @@ section.active {
         font-size: 3.5rem;
     }
 } 
+
+
+@keyframes display-text {
+    25%,100% {
+        display: none;
+    }
+}
+
+.home-detail h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: .2rem solid var(--main-color);
+    color: var(--main-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%,100% {
+        width: 0;
+    }
+    70%,90% {
+        width: 100%;
+    }
+}
