@@ -81,6 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Resume buttons or details are missing.');
     }
 
+        // Contact Button
+    const contactBtn = document.querySelector('.btn-sci .btn:nth-child(2)'); // Gets the Contact Me button
+    contactBtn?.addEventListener('click', () => {
+        // Find the contact section index (assuming it's the last nav link)
+        const contactIndex = navLinks.length - 1;
+        
+        if (!navLinks[contactIndex].classList.contains('active')) {
+            activePage();
+            navLinks[contactIndex].classList.add('active');
+
+            setTimeout(() => {
+                sections[contactIndex]?.classList.add('active');
+            }, 1100);
+        }
+    });
+
     // Function to Activate Portfolio Carousel
     const activePortfolio = () => {
         if (!imgSlide || portfolioDetails.length === 0) {

@@ -176,7 +176,6 @@ section.active {
     animation: fill-text 1s linear infinite;
 }
 
-
 .home-detail p {
     font-size: 1.6rem;
     margin: 1rem 0 2.5rem;
@@ -185,6 +184,12 @@ section.active {
 .home-detail .btn-sci {
     display: flex;
     align-items: center;
+    gap: 40px;
+}
+
+.btn-sci .buttons-container {
+    display: flex;
+    gap: 2rem;  /* This adds space between the buttons */
 }
 
 .btn {
@@ -433,6 +438,20 @@ section.active {
     justify-content: center;
 }
 
+
+.resume-list .resume-item.experience {
+    padding: 2rem 1.5rem; /* Adjust padding for tighter spacing */
+    min-height: auto; /* Allow height to dynamically adjust to content */
+    height: auto; /* Let height be determined by content */
+    max-height: none; /* Remove any max-height constraint */
+    overflow: visible; /* Ensure content is fully visible */
+    display: flex; /* Ensure consistent flex alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content to the top */
+    box-sizing: border-box; /* Include padding in dimensions */
+}
+
+
 .resume-item .year {
     color: var(--main-color);
 }
@@ -627,7 +646,7 @@ section.active {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 1rem;
 }
 
@@ -749,9 +768,9 @@ section.active {
 
 }
 
-/*breakpints*/
+/*breakpoints*/
 
-@media (min-width: 1200px) {
+@media (min-width: 1340px) {
     .home-img .img-box {
         width: 50rem;
         height: 50rem;
@@ -762,7 +781,20 @@ section.active {
     html {
         font-size: 55%;
     }
-    
+}
+
+@media screen and (max-width: 1068px) {
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .home-img .img-box {
+        width: 35rem;
+        height: 35rem;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -773,6 +805,7 @@ section.active {
     section {
         padding: 10rem 4% 2rem;
     }
+    /* Removed redundant .home and .home-img styles as they're handled in 1068px */
 }
 
 @media screen and (max-width: 810px) {
@@ -808,15 +841,7 @@ section.active {
         margin: 4rem 0;
     }
 
-    .home {
-        flex-direction: column-reverse;
-        justify-content: center;
-        gap: 2rem;
-    }
-    .home-img .img-box {
-        width: 35rem;
-        height: 35rem;
-    }
+    /* Removed redundant .home styles */
     .resume-container,
     .portfolio-container,
     .contact-container {
@@ -830,6 +855,7 @@ section.active {
     .portfolio-container .portfolio-box:first-child {
         order: 1;
     }
+    
     .contact-box .field-box {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -844,10 +870,39 @@ section.active {
     .contact-box .field-box {
         grid-template-columns: 1fr;
     }
+
+    .btn-sci {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .btn-sci .buttons-container {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .btn-sci .btn {
+        flex: 1;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+    .sci {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .sci a {
+        font-size: 2.5rem;
+        color: var(--text-color);
+    }
 }
 
 @media screen and (max-width: 450px) {
-    html{
+    html {
         font-size: 50%;
     }
 } 
