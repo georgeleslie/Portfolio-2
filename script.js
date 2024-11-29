@@ -164,7 +164,7 @@ async function handleContactFormSubmit(event) {
     };
 
     try {
-        const response = await fetch('https://your-render-url/send-email', {
+        const response = await fetch('https://portfolio-contact-form-bdzb.onrender.com/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
