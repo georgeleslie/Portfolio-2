@@ -163,7 +163,12 @@ async function handleContactFormSubmit(event) {
         message: form.querySelector('[name="message"]').value
     };
 
+    // Debug log
+    console.log('Sending form data:', formData);
+
     try {
+        console.log('Making fetch request to:', 'https://portfolio-contact-form-bdzb.onrender.com/send-email');
+        
         const response = await fetch('https://portfolio-contact-form-bdzb.onrender.com/send-email', {
             method: 'POST',
             headers: {
@@ -172,7 +177,9 @@ async function handleContactFormSubmit(event) {
             body: JSON.stringify(formData)
         });
 
+        console.log('Response status:', response.status);
         const result = await response.json();
+        console.log('Response data:', result);
         
         if (response.ok) {
             alert('Message sent successfully!');
@@ -181,6 +188,7 @@ async function handleContactFormSubmit(event) {
             throw new Error(result.error || 'Failed to send message');
         }
     } catch (error) {
+        console.error('Error details:', error);
         alert('Error sending message: ' + error.message);
     } finally {
         // Re-enable the submit button and restore original text
