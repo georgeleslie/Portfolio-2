@@ -143,3 +143,51 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
  
+// Add this function to handle form submission
+async function handleContactFormSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+    
+    // Disable the submit button and show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+
+    const formData = {
+        name: form.querySelector('[name="name"]').value,
+        email: form.querySelector('[name="email"]').value,
+        phone: form.querySelector('[name="phone"]').value,
+        subject: form.querySelector('[name="subject"]').value,
+        message: form.querySelector('[name="message"]').value
+    };
+
+    try {
+        const response = await fetch('https://your-render-url/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+        
+        if (response.ok) {
+            alert('Message sent successfully!');
+            form.reset();
+        } else {
+            throw new Error(result.error || 'Failed to send message');
+        }
+    } catch (error) {
+        alert('Error sending message: ' + error.message);
+    } finally {
+        // Re-enable the submit button and restore original text
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+    }
+}
+
+// Add this event listener to your contact form
+document.querySelector('#contact form').addEventListener('submit', handleContactFormSubmit);
