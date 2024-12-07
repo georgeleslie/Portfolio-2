@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     var typingEffect = new Typed(".typedText", {
-        strings: ["Designer", "Coder", "Developer"],
+        strings: ["AWS.", "Linux.", "Networking.", "Automation.", "SysOps.", "DevOps."],
         loop: true,
         typeSpeed: 100,
         backSpeed: 80,
