@@ -722,10 +722,10 @@ section.active {
 
 .contact-detail .detail p:first-child {
     color: var(--main-color);
-}
-
+},
 .contact-detail .detail p:last-child {
-    color: white;
+    color: white !important;
+    -webkit-text-fill-color: white !important;
 }
 
 .contact-box form {
